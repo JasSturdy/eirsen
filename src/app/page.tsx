@@ -10,15 +10,17 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black font-sans text-white">
+    <div className="bg-primary text-white">
       <Navbar />
-      <Hero />
-      <WhatWeDo />
-      <SovereignByDesign />
-      <OperationalInfrastructure />
-      <WhyItMatters />
-      <BuiltByPractitioners />
-      <CTABanner />
+      <main>
+        <div className="page-section-space"><Hero /></div>
+        <div className="page-section-space page-margin"><WhatWeDo /></div>
+        <div className="page-section-space page-margin"><SovereignByDesign /></div>
+        <div className="page-section-space page-margin"><OperationalInfrastructure /></div>
+        <div className="page-section-space page-margin"><WhyItMatters /></div>
+        <div className="page-section-space page-margin"><BuiltByPractitioners /></div>
+        <CTABanner />
+      </main>
       <Footer />
     </div>
   );

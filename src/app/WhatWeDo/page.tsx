@@ -44,7 +44,7 @@ const SERVICES: ServiceCardProps[] = [
     {
         icon: (
             <Image
-                src="/icons/operational-platforms.png"
+                src="/operation.png"
                 alt="Operational Platforms"
                 width={28}
                 height={28}
