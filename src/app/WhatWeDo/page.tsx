@@ -15,28 +15,31 @@ interface ServiceCardProps {
 
 function ServiceCard({ icon, title, description }: ServiceCardProps) {
     return (
-        <Card className="flex flex-col gap-4">
-            <div>{icon}</div>
-            <h3 className="text-sm font-semibold text-white">{title}</h3>
-            <p className="text-sm leading-relaxed text-zinc-400">{description}</p>
+        <Card className="flex flex-col gap-8">
+            <div className="green">{icon}</div>
+            <div className="flex flex-col gap-4">
+                <h3 className="text-lg font-semibold text-white">{title}</h3>
+                <hr className="border-zinc-700 w-1/3" />
+            </div>
+            <p className="text-lg leading-relaxed text-zinc-300">{description}</p>
         </Card>
     );
 }
 
 const SERVICES: ServiceCardProps[] = [
     {
-        icon: <Boxes />,
+        icon: <Boxes size={60} strokeWidth={0.5}/>,
         title: "Operational Infrastructure Design",
         description: "Secure system architecture for regulated environments.",
     },
     {
-        icon: <ShieldCheck />,
+        icon: <ShieldCheck size={60} strokeWidth={0.5}/>,
         title: "System Integration",
         description:
             "Connecting complex systems across organisations, processes, and data.",
     },
     {
-        icon: <FileSearchCorner />,
+        icon: <FileSearchCorner size={60} strokeWidth={0.5}/>,
         title: "Compliance & Assurance",
         description:
             "Designing systems aligned with regulatory, audit, and certification requirements.",
@@ -46,8 +49,8 @@ const SERVICES: ServiceCardProps[] = [
             <Image
                 src="/operation.png"
                 alt="Operational Platforms"
-                width={28}
-                height={28}
+                width={60}
+                height={60}
             />
         ),
         title: "Operational Platforms",
@@ -58,8 +61,8 @@ const SERVICES: ServiceCardProps[] = [
 
 export function WhatWeDo() {
     return (
-        <section className="mx-auto max-w-7xl px-6 py-24">
-            <h2 className="mb-12 text-2xl font-bold text-white">What We Do</h2>
+        <section className="relative w-full mx-auto">
+            <h2 className="mb-12 text-3xl font-bold text-green sm:text-4xl lg:text-5xl">What We Do</h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {SERVICES.map((service) => (
                     <ServiceCard key={service.title} {...service} />

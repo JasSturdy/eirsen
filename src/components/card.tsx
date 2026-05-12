@@ -13,10 +13,10 @@ export function Card({
   ...props
 }: CardProps) {
   const base =
-    "rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm";
+    "rounded-xl border border-zinc-700 bg-[#070E13] backdrop-blur-sm";
 
   const hoverStyles = hover
-    ? "transition-colors hover:border-green-400/30 hover:bg-white/8"
+    ? "transition-colors hover:bg-[#16222A]"
     : "";
 
   const paddings = {
