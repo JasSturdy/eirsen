@@ -1,11 +1,24 @@
+import Image from "next/image";
+
 export function BuiltByPractitioners() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
-      <div className="rounded-2xl border border-white/10 bg-white/5 px-8 py-16 text-center">
-        <h2 className="mb-4 text-2xl font-bold text-green-400">
+    <section className="relative overflow-hidden mx-auto text-center">
+      {/* Background Image */}
+      <Image
+        src="/bg-practitioners.png"
+        alt=""
+        fill
+        className="object-cover object-center"
+        priority
+      />
+      <div className="absolute inset-0 bg-black/30" />
+
+      {/* Content */}
+      <div className="relative px-6 py-16 lg:py-24">
+        <h2 className="mb-8 text-3xl sm:text-4xl lg:text-5xl text-green">
           Built by Practitioners
         </h2>
-        <p className="mx-auto max-w-2xl text-sm leading-relaxed text-zinc-400">
+        <p className="text-lg leading-relaxed text-zinc-300">
           We combine academic research and real-world experience in designing
           and operating systems in regulated and high-assurance environments.
         </p>

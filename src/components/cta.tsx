@@ -1,4 +1,5 @@
 import { Button } from "@/components/button";
+import Image from "next/image";
 
 interface CTABannerProps {
   title?: string;
@@ -14,20 +15,23 @@ export function CTABanner({
   buttonHref = "#",
 }: CTABannerProps) {
   return (
-    <section className="relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-zinc-950 to-black" />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(74,222,128,0.06),transparent)]"
+    <section className="relative overflow-hidden p-10 sm:p-16 lg:p-20" >
+      <Image
+        src="/bg-cta.png"
+        alt=""
+        fill
+        className="object-fill object-center"
+        priority
       />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/20" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-32 text-center">
-        <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
+      <div className="relative text-left">
+        <h2 className="mb-4 text-3xl sm:text-4xl lg:text-5xl text-white">
           {title}
         </h2>
-        <p className="mb-10 text-base text-zinc-400">{description}</p>
-        <Button href={buttonHref} size="lg">
+        <p className="mb-10 text-lg text-zinc-300">{description}</p>
+        <Button href={buttonHref} variant="solid">
           {buttonLabel}
         </Button>
       </div>

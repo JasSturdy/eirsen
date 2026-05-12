@@ -47,7 +47,8 @@ const SERVICES: ServiceCardProps[] = [
     {
         icon: (
             <Image
-                src="/operation.png"
+                src="/icons/operation.png"
+                className="pointer-events-none"
                 alt="Operational Platforms"
                 width={60}
                 height={60}

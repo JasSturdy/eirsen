@@ -7,6 +7,7 @@ import { WhyItMatters } from "@/app/WhyMatters/page";
 import { BuiltByPractitioners } from "@/app/BuiltByPractitioners/page";
 import { CTABanner } from "@/components/cta";
 import { Footer } from "@/components/footer";
+import { StatsRow } from "./StatsRow/page";
 
 export default function Home() {
   return (
@@ -17,9 +18,10 @@ export default function Home() {
         <div className="page-section-space page-margin"><WhatWeDo /></div>
         <div className="page-section-space page-margin"><SovereignByDesign /></div>
         <div className="page-section-space page-margin"><OperationalInfrastructure /></div>
-        <div className="page-section-space page-margin"><WhyItMatters /></div>
-        <div className="page-section-space page-margin"><BuiltByPractitioners /></div>
-        <CTABanner />
+        <div className="page-section-space"><StatsRow /></div>
+        <div className="page-margin"><WhyItMatters /></div>
+        <BuiltByPractitioners />
+        <div className="page-section-space page-margin"><CTABanner /></div>
       </main>
       <Footer />
     </div>

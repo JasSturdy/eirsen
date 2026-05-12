@@ -15,32 +15,32 @@ interface ReasonCardProps {
 function ReasonCard({ icon, title, description }: ReasonCardProps) {
   return (
     <Card padding="lg" className="flex flex-col gap-4">
-      <div>{icon}</div>
-      <h3 className="font-semibold text-white">{title}</h3>
-      <p className="text-sm leading-relaxed text-zinc-400">{description}</p>
+      <div className="green">{icon}</div>
+      <h3 className="text-lg font-semibold text-white">{title}</h3>
+      <p className="text-md leading-relaxed text-zinc-300">{description}</p>
     </Card>
   );
 }
 
 const REASONS: ReasonCardProps[] = [
   {
-    icon: <RefreshCcw />,
+    icon: <RefreshCcw size={60} strokeWidth={0.5}/>,
     title: "Operational Continuity",
     description: "Systems designed to maintain service under pressure.",
   },
   {
-    icon: <BrickWallShield />,
+    icon: <BrickWallShield size={60} strokeWidth={0.5}/>,
     title: "Secure Infrastructure",
     description:
       "Security embedded across systems, data, and operational layers.",
   },
   {
-    icon: <UserRoundCog />,
+    icon: <UserRoundCog size={60} strokeWidth={0.5}/>,
     title: "Resilience Engineering",
     description: "Architected to withstand disruption, failure, and change.",
   },
   {
-    icon: <Landmark />,
+    icon: <Landmark size={60} strokeWidth={0.5}/>,
     title: "Governance and Control",
     description:
       "Auditability, traceability, and controlled access by design.",
@@ -49,11 +49,11 @@ const REASONS: ReasonCardProps[] = [
 
 export function WhyItMatters() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
-      <h2 className="mb-12 text-center text-2xl font-bold text-white">
+    <section className="mx-auto">
+      <h2 className="mb-12 text-center text-3xl sm:text-4xl lg:text-5xl text-white">
         Why Operational Systems Matter
       </h2>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {REASONS.map((reason) => (
           <ReasonCard key={reason.title} {...reason} />
         ))}
