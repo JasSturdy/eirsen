@@ -16,7 +16,7 @@ export function Hero() {
     <section className="relative flex min-h-screen items-center overflow-hidden">
       <div className="pointer-events-none absolute inset-0 lg:left-1/2 lg:right-0 lg:inset-y-0">
         <Image
-          src="/hero.png"
+          src="/home-hero.png"
           alt=""
           fill
           priority
