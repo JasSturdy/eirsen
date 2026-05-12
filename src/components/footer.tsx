@@ -1,12 +1,14 @@
+import Link from "next/link";
+
 const FOOTER_LINKS = [
-  "Home",
-  "About",
-  "Portal",
-  "Contact",
+  { label: "Home", href: "/" },
+  { label: "About", href: "/About" },
+  { label: "Portal", href: "/Portal" },
+  { label: "Contact", href: "/Contact" },
   null,
-  "Privacy",
-  "Terms",
-  "Legal",
+  { label: "Privacy", href: "/Privacy" },
+  { label: "Terms", href: "/Terms" },
+  { label: "Legal", href: "/Legal" },
 ] as const;
 
 export function Footer() {
@@ -19,10 +21,10 @@ export function Footer() {
             item === null ? (
               <li key={`divider-${index}`} aria-hidden className="h-4 w-px bg-zinc-600" />
             ) : (
-              <li key={item}>
-                <a href="#" className="nav-link-underline text-sm lg:text-md text-white transition-colors hover:text-green">
-                  {item}
-                </a>
+              <li key={item.label}>
+                <Link href={item.href} className="nav-link-underline text-sm lg:text-md text-white transition-colors hover:text-green">
+                  {item.label}
+                </Link>
               </li>
             )
           )}
