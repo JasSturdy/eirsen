@@ -25,7 +25,7 @@ export default function HomePage() {
           <div className="page-section-space"><StatsRow /></div>
           <div className="page-margin"><WhyItMatters /></div>
           <BuiltByPractitioners />
-          <div className="page-margin"><CTABanner /></div>
+          <div className="page-section-space page-margin"><CTABanner /></div>
         </main>
         <Footer />
       </div>
