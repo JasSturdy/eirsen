@@ -13,19 +13,19 @@ export function Button({
   ...props
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-lg font-bold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400";
+    "inline-flex items-center justify-center gap-3 rounded-[7px] font-semibold tracking-[0.03em] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400";
 
   const variants = {
     outline:
-      "border border-[#8CC43F] text-[#8CC43F] hover:bg-lime-300 hover:text-black",
+      "border border-[#8CC43F] text-[#8CC43F] hover:bg-[#8CC43F] hover:text-[#04080B]",
     solid:
-      "bg-[#8CC43F] text-[#04080B] hover:bg-lime-300",
+      "border border-[#8CC43F] bg-[#8CC43F] text-[#0D0F12] hover:border-[#A4D65E] hover:bg-[#A4D65E]",
   };
 
   const sizes = {
     sm: "px-4 py-2 text-xs",
-    md: "px-6 py-3 text-lg",
-    lg: "px-8 py-4 text-base",
+    md: "h-[44px] px-6 text-sm",
+    lg: "h-[71px] px-8 text-2xl",
   };
 
   return (

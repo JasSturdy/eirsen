@@ -9,8 +9,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-green: #8CC43F; 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,7 +23,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
 
 .bg-primary {
@@ -37,13 +37,32 @@ body {
 .page-margin {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  max-width: 1802px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   width: 100%;
 }
 
 .page-section-space {
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
+}
+
+@media (min-width: 1024px) {
+  .page-margin {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+
+  .page-section-space {
+    margin-bottom: 7.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .page-margin {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .nav-link-underline {
@@ -55,8 +74,31 @@ body {
   100% { transform: translateX(-50%); }
 }
 
+@keyframes homepage-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
 .animate-ticker {
   animation: ticker 12s linear infinite;
+}
+
+.homepage-marquee {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 5%,
+    #000 95%,
+    transparent
+  );
+}
+
+.homepage-marquee-track {
+  animation: homepage-marquee 28s linear infinite;
+}
+
+.homepage-marquee:hover .homepage-marquee-track {
+  animation-play-state: paused;
 }
 
 .nav-link-underline::after {

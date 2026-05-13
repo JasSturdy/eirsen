@@ -19,7 +19,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative w-full mx-auto px-6 sm:px-10 md:py-0">
+      <div className="relative mx-auto w-full max-w-[1802px] px-6 sm:px-10 md:py-0 lg:px-[60px] min-[1920px]:px-0">
         <div className="max-w-3xl">
           <SectionLabel>Portal Access</SectionLabel>
           <h1 className="mb-4 text-4xl leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">

@@ -1,8 +1,5 @@
 import { SectionLabel } from "@/components/sectionLabel";
-import {
-  Eye,
-  Lock,
-} from "lucide-react";
+import { Eye, Lock } from "lucide-react";
 import Image from "next/image";
 
 interface PillarCardProps {
@@ -11,12 +8,23 @@ interface PillarCardProps {
   description: string;
 }
 
-function PillarCard({ icon, title, description, className }: PillarCardProps & { className?: string }) {
+function PillarCard({
+  icon,
+  title,
+  description,
+  className,
+}: PillarCardProps & { className?: string }) {
   return (
-    <div className={`flex flex-col gap-3 motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-safe:hover:-translate-y-1 ${className}`}>
-      <div className="text-green">{icon}</div>
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
-      <p className="text-md leading-relaxed text-zinc-300">{description}</p>
+    <div
+      className={`flex min-h-[240px] flex-col gap-[14px] motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-safe:hover:-translate-y-1 ${className}`}
+    >
+      <div className="h-20 text-green">{icon}</div>
+      <h3 className="text-lg font-semibold leading-[30px] tracking-[0.02em] text-[#EFEBEB] lg:text-2xl">
+        {title}
+      </h3>
+      <p className="max-w-[390px] text-base font-medium leading-[1.55] tracking-[0.02em] text-[#EFEBEB] lg:text-2xl lg:leading-[30px]">
+        {description}
+      </p>
     </div>
   );
 }
@@ -27,7 +35,7 @@ const PILLARS: PillarCardProps[] = [
       <Image
         src="/icons/resilience.png"
         className="pointer-events-none"
-        alt="Resilience"
+        alt=""
         width={60}
         height={60}
       />
@@ -37,7 +45,7 @@ const PILLARS: PillarCardProps[] = [
       "Architected for high availability, fault tolerance, and operational continuity.",
   },
   {
-    icon: <Eye size={60} strokeWidth={0.5} />,
+    icon: <Eye size={60} strokeWidth={0.8} />,
     title: "Visibility",
     description:
       "Real-time observability across systems, infrastructure, and operational layers.",
@@ -47,7 +55,7 @@ const PILLARS: PillarCardProps[] = [
       <Image
         src="/icons/coordination.png"
         className="pointer-events-none"
-        alt="Coordination"
+        alt=""
         width={70}
         height={70}
       />
@@ -57,7 +65,7 @@ const PILLARS: PillarCardProps[] = [
       "Integrated systems working in sync across people, processes, and technology.",
   },
   {
-    icon: <Lock size={60} strokeWidth={0.5} />,
+    icon: <Lock size={60} strokeWidth={0.8} />,
     title: "Control",
     description:
       "Governed access, change control, and automated safeguards at every layer.",
@@ -65,31 +73,30 @@ const PILLARS: PillarCardProps[] = [
 ];
 
 const PILLAR_CLASSES = [
-  // index 0 — no divider anywhere
   "lg:pr-8",
-  // index 1 — divider left on tablet and desktop
-  "sm:border-l sm:border-zinc-700 sm:pl-8 lg:px-8",
-  // index 2 — divider left on desktop only
-  "lg:border-l lg:border-zinc-700 lg:px-8",
-  // index 3 — divider left on tablet and desktop
-  "sm:border-l sm:border-zinc-700 sm:pl-8 lg:px-8 lg:pr-0",
+  "sm:border-l sm:border-white/20 sm:pl-8 lg:px-12",
+  "lg:border-l lg:border-white/20 lg:px-12",
+  "sm:border-l sm:border-white/20 sm:pl-8 lg:pl-12 lg:pr-0",
 ];
 
 export function OperationalInfrastructure() {
   return (
-    <section className="mx-auto">
+    <section>
       <SectionLabel>Operational Infrastructure</SectionLabel>
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white">
+      <h2 className="text-3xl font-medium tracking-[-0.03em] text-white sm:text-4xl lg:text-[50px] lg:leading-[75px]">
         The Foundation of every System We Design
       </h2>
-      <p className="mt-6 mb-16 text-lg text-zinc-300">
+      <p className="mb-16 mt-3 text-lg font-medium leading-[30px] tracking-[0.02em] text-[#EFEBEB] lg:text-2xl">
         Resilience, visibility, coordination, and control.
       </p>
 
-      {/* Pillar cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
         {PILLARS.map((pillar, i) => (
-          <PillarCard key={pillar.title} {...pillar} className={PILLAR_CLASSES[i]} />
+          <PillarCard
+            key={pillar.title}
+            {...pillar}
+            className={PILLAR_CLASSES[i]}
+          />
         ))}
       </div>
     </section>

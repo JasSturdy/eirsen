@@ -12,23 +12,33 @@ import { Suspense } from "react";
 
 export default function HomePage() {
   return (
-    <main>
-      <div className="bg-primary text-white">
-        <Suspense fallback={null}>
-          <Navbar />
-        </Suspense>
-        <main>
-          <div className="page-section-space"><Hero /></div>
-          <div className="page-section-space page-margin"><WhatWeDo /></div>
-          <div className="page-section-space page-margin"><SovereignByDesign /></div>
-          <div className="page-section-space page-margin"><OperationalInfrastructure /></div>
-          <div className="page-section-space"><StatsRow /></div>
-          <div className="page-margin"><WhyItMatters /></div>
-          <BuiltByPractitioners />
-          <div className="page-section-space page-margin"><CTABanner /></div>
-        </main>
-        <Footer />
-      </div>
-    </main>
+    <div className="bg-primary text-white">
+      <Suspense fallback={null}>
+        <Navbar />
+      </Suspense>
+      <main>
+        <Hero />
+        <div className="page-section-space page-margin">
+          <WhatWeDo />
+        </div>
+        <div className="page-section-space page-margin">
+          <SovereignByDesign />
+        </div>
+        <div className="page-section-space page-margin">
+          <OperationalInfrastructure />
+        </div>
+        <div className="page-section-space">
+          <StatsRow />
+        </div>
+        <div className="page-margin">
+          <WhyItMatters />
+        </div>
+        <BuiltByPractitioners />
+        <div className="page-section-space page-margin">
+          <CTABanner />
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
