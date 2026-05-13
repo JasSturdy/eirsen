@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -22,9 +23,16 @@ export function Navbar() {
     <nav className="flexible top-0 z-50 w-full bg-primary backdrop-blur-md">
       <div className="mx-auto flex max-w-8xl items-center justify-between px-10 py-8">
         {/* Logo */}
-        <span className="text-sm font-semibold tracking-tight text-white">
-          Company X
-        </span>
+        <Link href="/" aria-label="Eirsen home" className="shrink-0">
+          <Image
+            src="/eirsen-logo-v2.png"
+            alt="Eirsen"
+            width={1142}
+            height={160}
+            priority
+            className="h-auto w-40 sm:w-52"
+          />
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-10">
