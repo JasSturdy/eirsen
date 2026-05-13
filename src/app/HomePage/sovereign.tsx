@@ -37,7 +37,7 @@ export function SovereignByDesign() {
             {/* Column 3 */}
             <ul className="flex flex-col gap-4 xl:justify-self-end">
               {PILLARS.map((item) => (
-                <li key={item} className="flex items-center gap-2 text-lg text-zinc-300">
+                <li key={item} className="flex items-center gap-2 text-lg text-zinc-300 motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-safe:hover:translate-x-1">
                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-green" />
                   {item}
                 </li>

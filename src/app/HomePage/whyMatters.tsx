@@ -14,7 +14,7 @@ interface ReasonCardProps {
 
 function ReasonCard({ icon, title, description }: ReasonCardProps) {
   return (
-    <Card padding="lg" className="flex flex-col gap-4">
+    <Card padding="lg" className="flex flex-col gap-4 motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out motion-safe:hover:-translate-y-1">
       <div className="green">{icon}</div>
       <h3 className="text-lg font-semibold text-white">{title}</h3>
       <p className="text-md leading-relaxed text-zinc-300">{description}</p>

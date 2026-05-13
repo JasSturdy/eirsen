@@ -15,7 +15,7 @@ interface ServiceCardProps {
 
 function ServiceCard({ icon, title, description }: ServiceCardProps) {
     return (
-        <Card className="flex flex-col gap-8">
+        <Card className="flex flex-col gap-8 motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out motion-safe:hover:-translate-y-1">
             <div className="green">{icon}</div>
             <div className="flex flex-col gap-4">
                 <h3 className="text-lg font-semibold text-white">{title}</h3>

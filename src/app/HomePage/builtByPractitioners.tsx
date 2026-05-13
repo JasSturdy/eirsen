@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export function BuiltByPractitioners() {
   return (
-    <section className="relative overflow-hidden mx-auto text-center">
+    <section className="group relative overflow-hidden mx-auto text-center">
       {/* Background Image */}
       <Image
         src="/bg-practitioners.png"
         alt=""
         fill
-        className="object-cover object-center"
+        className="object-cover object-center motion-safe:transition-transform motion-safe:duration-[1200ms] motion-safe:ease-out group-hover:scale-[1.02]"
         priority
       />
       <div className="absolute inset-0 bg-black/30" />

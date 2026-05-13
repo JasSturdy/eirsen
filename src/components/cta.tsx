@@ -15,12 +15,12 @@ export function CTABanner({
   buttonHref = "#",
 }: CTABannerProps) {
   return (
-    <section className="relative overflow-hidden p-10 sm:p-16 lg:p-20" >
+    <section className="group relative overflow-hidden p-10 sm:p-16 lg:p-20" >
       <Image
         src="/bg-cta.png"
         alt=""
         fill
-        className="object-fill object-center"
+        className="object-fill object-center motion-safe:transition-transform motion-safe:duration-[1200ms] motion-safe:ease-out group-hover:scale-[1.02]"
         priority
       />
       {/* Overlay */}
@@ -31,7 +31,11 @@ export function CTABanner({
           {title}
         </h2>
         <p className="mb-10 text-lg text-zinc-300">{description}</p>
-        <Button href={buttonHref} variant="solid">
+        <Button
+          href={buttonHref}
+          variant="solid"
+          className="motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0"
+        >
           {buttonLabel}
         </Button>
       </div>

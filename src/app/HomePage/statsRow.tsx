@@ -9,7 +9,7 @@ interface StatBadgeProps {
 
 function StatBadge({ icon, value, label }: StatBadgeProps) {
   return (
-    <div className="flex items-center gap-3 sm:gap-4 rounded-3xl px-4 py-6 sm:p-8 lg:p-10">
+    <div className="flex items-center gap-3 rounded-3xl px-4 py-6 motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-safe:hover:-translate-y-1 sm:gap-4 sm:p-8 lg:p-10">
       <span className="text-zinc-300 shrink-0">{icon}</span>
       <div className="min-w-0">
         <p className="text-xl sm:text-2xl lg:text-3xl text-white font-medium leading-tight truncate">

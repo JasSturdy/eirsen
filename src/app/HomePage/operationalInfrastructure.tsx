@@ -13,7 +13,7 @@ interface PillarCardProps {
 
 function PillarCard({ icon, title, description, className }: PillarCardProps & { className?: string }) {
   return (
-    <div className={`flex flex-col gap-3 ${className}`}>
+    <div className={`flex flex-col gap-3 motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-safe:hover:-translate-y-1 ${className}`}>
       <div className="text-green">{icon}</div>
       <h3 className="text-lg font-semibold text-white">{title}</h3>
       <p className="text-md leading-relaxed text-zinc-300">{description}</p>

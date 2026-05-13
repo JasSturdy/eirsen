@@ -13,7 +13,7 @@ const SECTORS = [
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden">
+    <section className="group relative flex min-h-screen items-center overflow-hidden">
       <div className="pointer-events-none absolute inset-0 lg:left-1/2 lg:right-0 lg:inset-y-0">
         <Image
           src="/home-hero.png"
@@ -21,7 +21,7 @@ export function Hero() {
           fill
           priority
           sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover object-center lg:object-left"
+          className="object-cover object-center motion-safe:transition-transform motion-safe:duration-[1200ms] motion-safe:ease-out group-hover:scale-[1.02] lg:object-left"
         />
         <div className="absolute inset-0 bg-black/60 lg:bg-transparent" />
       </div>
@@ -37,37 +37,31 @@ export function Hero() {
             Secure Operational Systems. Designed for mission-critical and
             regulated environments.
           </p>
-          <Button href="#" variant="solid">
+          <Button
+            href="#"
+            variant="solid"
+            className="motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0"
+          >
             Request Briefing →
           </Button>
         </div>
       </div>
 
       {/* Sector ticker */}
-      <div className="absolute bottom-0 left-0 right-0 bg-primary backdrop-blur-xl overflow-hidden">
-
-        {/* Mobile */}
-        <div className="flex md:hidden">
-          <ul className="animate-ticker flex shrink-0 items-center gap-8 py-4 text-sm text-white whitespace-nowrap">
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden bg-primary backdrop-blur-xl">
+        <div className="flex">
+          <ul className="animate-ticker flex min-w-max shrink-0 items-center gap-8 whitespace-nowrap px-10 py-4 text-sm text-white [animation-duration:18s] md:gap-28 lg:gap-36 xl:gap-44">
             {[...SECTORS, ...SECTORS].map((sector, i) => (
-              <li key={i} className="flex shrink-0 items-center gap-8">
-                <span className="text-white">•</span>
+              <li
+                key={`${sector}-${i}`}
+                className="flex shrink-0 items-center gap-8 transition-colors duration-300 hover:text-[#8CC43F] md:gap-10"
+              >
+                {i % SECTORS.length > 0 && <span className="text-white">•</span>}
                 {sector}
               </li>
             ))}
           </ul>
         </div>
-
-        {/* Desktop */}
-        <ul className="hidden md:flex items-center justify-between py-4 text-sm text-white px-10">
-          {SECTORS.map((sector, i) => (
-            <li key={sector} className="flex shrink-0 items-center gap-4">
-              {i > 0 && <span className="text-white">•</span>}
-              {sector}
-            </li>
-          ))}
-        </ul>
-
       </div>
     </section>
   );
