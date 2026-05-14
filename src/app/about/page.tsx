@@ -5,7 +5,6 @@ import { CredibilitySection } from "./_components/credibility";
 import { HeroSection } from "./_components/hero";
 import { PrinciplesSection } from "./_components/principles";
 import { RequirementsSection } from "./_components/requirements";
-import { ResilienceCtaSection } from "./_components/resilienceCta";
 import { SovereignPositionSection } from "./_components/sovereign";
 import { SystemsSection } from "./_components/systemsSection";
 import { WhoWeAreSection } from "./_components/whoWeAre";
