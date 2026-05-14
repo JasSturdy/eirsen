@@ -3,7 +3,7 @@ import { sectors } from "../_lib/content";
 
 export function CredibilitySection() {
   return (
-    <section className="page-margin page-section-space">
+    <section>
       <div className="mx-auto grid max-w-[1802px] gap-8 lg:grid-cols-2">
         <article className="rounded-[17px] border-4 border-[#2b2b2b] p-8 sm:p-10 lg:min-h-[520px]">
           <SectionLabel>Credibility</SectionLabel>

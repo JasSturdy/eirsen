@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { SectionLabel } from "@/components/sectionLabel";
-import { BriefingButton } from "./briefing-button";
+import { Button } from "@/components/button";
+import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -25,10 +26,18 @@ export function HeroSection() {
             <br />
             Infrastructure Design.
           </h1>
-          <p className="mt-8 max-w-3xl text-lg font-medium leading-8 tracking-wide text-zinc-100 sm:text-2xl">
+          <p className="mt-8 mb-8 max-w-3xl text-lg font-medium leading-8 tracking-wide text-zinc-100 sm:text-2xl">
             We design secure operational systems for mission-critical and regulated environments.
           </p>
-          <BriefingButton className="mt-10" />
+          <Button
+            href="/Contact"
+            variant="solid"
+            size="md"
+            className="motion-safe:transition-transform motion-safe:duration-300 motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0"
+          >
+            Request Briefing
+            <ArrowRight size={16} strokeWidth={2} />
+          </Button>
         </div>
 
         <div className="relative min-h-[320px] overflow-hidden rounded-[18px] border border-white/10 lg:hidden">
