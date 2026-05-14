@@ -1,31 +1,32 @@
 import { Suspense } from "react";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { CredibilitySection } from "./_components/credibility-section";
-import { HeroSection } from "./_components/hero-section";
-import { PrinciplesSection } from "./_components/principles-section";
-import { RequirementsSection } from "./_components/requirements-section";
-import { ResilienceCtaSection } from "./_components/resilience-cta-section";
-import { SovereignPositionSection } from "./_components/sovereign-position-section";
-import { SystemsSection } from "./_components/systems-section";
-import { WhoWeAreSection } from "./_components/who-we-are-section";
+import { CredibilitySection } from "./_components/credibility";
+import { HeroSection } from "./_components/hero";
+import { PrinciplesSection } from "./_components/principles";
+import { RequirementsSection } from "./_components/requirements";
+import { ResilienceCtaSection } from "./_components/resilienceCta";
+import { SovereignPositionSection } from "./_components/sovereign";
+import { SystemsSection } from "./_components/systemsSection";
+import { WhoWeAreSection } from "./_components/whoWeAre";
+import { CTABanner } from "@/components/cta";
 
 export default function About() {
   return (
-    <div className="bg-[#070b0e] text-white">
+    <div className="bg-primary text-white">
       <Suspense fallback={null}>
         <Navbar />
       </Suspense>
 
       <main>
         <HeroSection />
-        <WhoWeAreSection />
-        <SovereignPositionSection />
-        <RequirementsSection />
-        <SystemsSection />
-        <PrinciplesSection />
-        <CredibilitySection />
-        <ResilienceCtaSection />
+        <div className="page-section-space page-margin"><WhoWeAreSection /></div>
+        <div className="page-section-space page-margin"><SovereignPositionSection /></div>
+        <div className="page-section-space page-margin"><RequirementsSection /></div>
+        <div className="page-section-space page-margin"><SystemsSection /></div>
+        <div className="page-section-space page-margin"><PrinciplesSection /></div>
+        <div className="page-section-space page-margin"><CredibilitySection /></div>
+        <div className="page-section-space page-margin"><CTABanner /></div>
       </main>
 
       <Footer />

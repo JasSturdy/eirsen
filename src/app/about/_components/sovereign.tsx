@@ -51,7 +51,7 @@ const sovereignMarkers = [
 
 export function SovereignPositionSection() {
   return (
-    <section className="page-margin page-section-space">
+    <section>
       <div className="mx-auto max-w-[1802px] rounded-[17px] border border-[#2b2b2b] bg-[#101316] bg-[radial-gradient(circle_at_center_top,rgba(140,196,63,0.2),rgba(16,19,22,0.55)_34%,#101316_72%)] p-8 sm:p-10 lg:p-14">
         <div className="grid gap-8 lg:grid-cols-[1.05fr_1fr] lg:items-center">
           <div>

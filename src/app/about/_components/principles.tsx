@@ -3,7 +3,7 @@ import { principles } from "../_lib/content";
 
 export function PrinciplesSection() {
   return (
-    <section className="page-margin page-section-space">
+    <section>
       <div className="mx-auto grid max-w-[1802px] gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
         <div>
           <SectionLabel>Operational Principles</SectionLabel>

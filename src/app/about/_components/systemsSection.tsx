@@ -3,7 +3,7 @@ import { systems } from "../_lib/content";
 
 export function SystemsSection() {
   return (
-    <section className="page-margin page-section-space">
+    <section>
       <div className="mx-auto max-w-[1802px] text-center">
         <SectionLabel>What We Design</SectionLabel>
         <h2 className="mt-5 text-4xl font-medium leading-tight tracking-tight text-white lg:text-6xl">

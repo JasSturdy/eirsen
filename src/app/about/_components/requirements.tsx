@@ -4,7 +4,7 @@ import { requirements } from "../_lib/content";
 
 export function RequirementsSection() {
   return (
-    <section className="page-margin page-section-space">
+    <section>
       <div className="mx-auto grid max-w-[1802px] gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
         <div>
           <SectionLabel>What We Understand</SectionLabel>

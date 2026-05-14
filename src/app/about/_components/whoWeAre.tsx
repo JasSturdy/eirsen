@@ -1,6 +1,6 @@
 export function WhoWeAreSection() {
   return (
-    <section className="page-margin page-section-space">
+    <section>
       <div className="mx-auto grid max-w-[1802px] gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
         <div>
           <p className="text-lg font-bold uppercase tracking-[0.02em] text-green lg:text-2xl">
